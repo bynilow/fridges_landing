@@ -1,0 +1,92 @@
+.container{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+section{
+    height: 250vh;
+    width: 100%;
+    padding-top: 2vw;
+}
+
+h2,h3{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h3 span{
+    color: orange;
+}
+
+.technics{
+    margin-top: 2vw;
+}
+
+.name_technic{
+    font-size: 1.5vw;
+    color:white;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+    padding: 10px;
+
+    background: #005c99;
+}
+
+.repair_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    background-color: #f8f8f8;;
+
+    font-weight: bold;
+}
+
+.repair_info *{
+    flex: 1 1 0;
+}
+
+.info_price{
+    flex: 0.3 1 0;
+}
+
+.info_empty{
+    flex: 0.3 1 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 95vw;
+    }
+
+    .name_technic{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        max-width: 90vw;
+    }
+
+    .name_technic{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        max-width: 95vw;
+        flex-wrap: wrap;
+    }
+    .name_technic{
+        font-size: 5vw;
+    }
+    .requiredWorks_p{
+        display: none;
+        flex: 0 0 0;
+    }
+}

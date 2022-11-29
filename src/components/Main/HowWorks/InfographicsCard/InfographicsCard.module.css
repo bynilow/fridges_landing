@@ -1,0 +1,134 @@
+.card{
+    width: 5vw;
+    height: 5vw;
+    background: orange;
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img{
+    width: 60%;
+    filter: invert();
+}
+
+.description_block{
+    position: absolute;
+    bottom: -90%;
+    left: 50%;
+    width: 250%;
+    height: 70%;
+
+    transform: translateX(-50%);
+}
+
+.description{
+    text-align: center;
+    color: white;
+    line-height: 0.9;
+}
+
+.ind{
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    top: 25%;
+    left: -30%;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+    transform: translate(0, -50%);
+
+    background: white;
+
+    color: black;
+    line-height: 0;
+    font-weight: bold;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: rotate(-45deg);
+}
+
+.ind *{
+    transform: rotate(45deg);
+}
+
+
+@media screen and (max-width: 1000px) {
+    .description_block {
+        width: 400%;
+        height: 100%;
+    }
+    .top{
+        top: -130%;
+        
+    }
+    .down{
+        bottom: -150%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .description_block {
+        width: 200%;
+        height: 100%;
+    }
+    .top{
+        top: -25%;
+        transform: translateY(50%);
+        left: -300%;
+    }
+    .down{
+        top: -25%;
+        transform: translateY(50%);
+        left: 150%;
+    }
+    .dashed_steps{
+        display: none;
+    }
+    .infographics .container{
+        width: 70%;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 10vw;
+        height: 10vw;
+    }
+    .ind{
+        width: 5vw;
+        height: 5vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .top{
+        top: -50%;
+        left: -350%;
+        width: 300%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .down{
+        top: -50%;
+        width: 300%;
+        height: 100%;
+        left: 150%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

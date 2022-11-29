@@ -1,0 +1,135 @@
+.how_works_section{
+    height: 100vh;
+    
+}
+
+.container{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.texts{
+    text-align: center;
+}
+
+.texts p{
+    font-size: 1.5vw;
+    margin-bottom: 2vw;
+}
+
+.form {
+    position: relative;
+   
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    gap: 15px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.checkbox label {
+    margin-left: 1vw;
+}
+
+.input {
+    font-size: 1vw;
+    padding: 10px;
+    border: 2px solid #bdcdf1;
+    border-radius: 5px;
+
+    width: 100%;
+}
+
+
+.btn {
+    font-size: 1vw;
+    padding: 10px;
+    border-radius: 5px;
+    background: orange;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+
+    transition: .15s ease;
+}
+
+.btn:hover {
+    background: #FF8C00;
+}
+
+.select_div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.select_div select{
+    font-size: 1vw;
+    padding: 10px;
+    border: 2px solid #bdcdf1;
+    border-radius: 5px;
+}
+
+.select_p{
+    font-size: 1vw;
+    font-weight: 400;
+    color: #757575;
+}
+
+.sended_block{
+    background-color: white;
+    padding: 150px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 95vw;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .close{
+        width: 8%;
+    }
+    .input, .btn, .checkbox, .select_div select, .select_p{
+        font-size: 2vw;
+    }
+    .checkbox{
+        width: 90%;
+    }
+    .texts p{
+        font-size: 3vw;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+    .input, .btn, .checkbox, .select_div select, .select_p{
+        font-size: 3vw;
+    }
+}

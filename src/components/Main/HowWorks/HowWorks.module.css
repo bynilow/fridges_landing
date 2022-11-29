@@ -1,0 +1,149 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.how_works_section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infographics_outer::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 80%;
+    left: 0;
+    background: #0099ff;
+}
+
+.how_works_h{
+    color: white;
+    font-size: 2vw;
+    line-height: 0;
+}
+
+.infographics_outer{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    position: relative;
+    
+}
+
+
+
+.svg_up{
+    position: absolute;
+    height: 100%;
+    top: -80%;
+    z-index: -2;
+}
+
+.svg_down{
+    position: absolute;
+    height: 100%;
+    top: 80%;
+    z-index: -2;
+
+    transform: rotate(180deg);
+}
+
+.infographics{
+    height: 70%;
+    position: relative;
+    
+
+}
+
+.infographics .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.dashed_steps{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    
+    border-bottom: 5px dashed white;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 930px;
+    }
+
+    .how_works_section{
+        margin-top: 100vh;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .infographics .container{
+        width: 80%;
+    }
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .how_works_h{
+        font-size: 3vw;
+    }
+    .dashed_steps{
+        display: none;
+    }
+    .infographics_outer{
+        height: 100vh;
+    }
+    .infographics .container{
+        width: 70%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .reception_outer_works h2{
+        font-size: 5vw;
+    }
+    .reception_outer_works p{
+        font-size: 3vw;
+    }
+    .how_works_section{
+        margin-top: 0;
+    }
+    .how_works_input{
+        font-size: 3vw;
+        width: 100%;
+    }
+    .inputs{
+        width: 100%;
+    }
+    .how_works_form{
+        width: 90%;
+    }
+    .checkbox label{
+        font-size: 2.5vw;
+    }
+    .btn{
+        font-size: 3vw;
+    }
+}
