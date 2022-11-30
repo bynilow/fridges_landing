@@ -27,6 +27,9 @@
     flex-wrap: wrap;
     gap: 10px;
 
+    max-height: 70vh;
+    overflow: hidden;
+
 }
 
 .repair_all_h2{
@@ -65,7 +68,6 @@
 
     .fridges_section{
         font-size: 2vw;
-        height: 125vh;
     }
 
     .repair_all_h2{
@@ -76,7 +78,6 @@
 @media screen and (max-width: 650px) {
     .fridges_section{
         font-size: 3vw;
-        height: 160vh;
     }
     .repair_all_h2{
         font-size: 2vw;
@@ -85,7 +86,6 @@
 
 @media screen and (max-width: 450px) {
     .fridges_section{
-        height: auto;
     }
     .bottom_text{
         margin: 4vw;

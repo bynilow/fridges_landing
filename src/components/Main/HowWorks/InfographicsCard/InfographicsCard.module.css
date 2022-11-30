@@ -24,12 +24,12 @@
     left: 50%;
     width: 250%;
     height: 70%;
+    text-align: center;
 
     transform: translateX(-50%);
 }
 
 .description{
-    text-align: center;
     color: white;
     line-height: 0.9;
 }
@@ -68,11 +68,11 @@
         width: 400%;
         height: 100%;
     }
-    .top{
+    .description_top{
         top: -130%;
         
     }
-    .down{
+    .description_down{
         bottom: -150%;
     }
 }
@@ -82,12 +82,12 @@
         width: 200%;
         height: 100%;
     }
-    .top{
+    .description_top{
         top: -25%;
         transform: translateY(50%);
         left: -300%;
     }
-    .down{
+    .description_down{
         top: -25%;
         transform: translateY(50%);
         left: 150%;
@@ -110,25 +110,47 @@
 }
 
 @media screen and (max-width: 600px) {
-    .top{
+    .card{
+        width: 15vw;
+        height: 15vw;
+    }
+    .ind{
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .description_top{
         top: -50%;
-        left: -350%;
+        left: -450%;
         width: 300%;
         
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+
+        text-align: start;
     }
-    .down{
+    .description_down{
         top: -50%;
         width: 300%;
         height: 100%;
-        left: 150%;
+        left: 250%;
 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
+
+        text-align: end;
+    }
+    .card_left{
+        margin-right: 70%;
+    }
+    .card_right{
+        margin-left: 70%;
+    }
+    .ind_right{
+        left: 80%;
     }
 }

@@ -6,12 +6,19 @@ function Footer({myref, onClickLink}) {
     return ( 
         <footer className={s.footer} ref={myref}>
             <div className={s.container}>
-                <div className={s.logo_block}>
-                    <h2>Холодильники</h2>
-                    <p>
-                        Ремонт холодильников в Екатеринбурге
-                    </p>
-                </div>
+                
+                    <div className={s.logo_c} onClick={() => onClickLink('main')}>
+                        <img src="images/logo.svg" alt="Логотип починки холодильников" />
+                        <div className={s.logo_texts}>
+                            <p className={s.logo_top_text}>
+                                Ремонт холодильников
+                            </p>
+                            <p className={s.logo_name}>
+                                Холодильщик96
+                            </p>
+                        </div>
+                    </div>
+                
                 <div className={s.contacts_block}>
                     <p className={s.contacts_p}>
                         Контакты
