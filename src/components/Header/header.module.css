@@ -140,6 +140,12 @@ header {
     .header_link{
         font-size: 1.5vw;
     }
+    .logo_top_text{
+        font-size: 1.2vw;
+    }
+    .logo_name{
+        font-size: 1.5vw;
+    }
 }
 
 @media screen and (max-width: 960px) {
@@ -147,6 +153,12 @@ header {
         width: 95vw;
     }
     .header_link{
+        font-size: 2vw;
+    }
+    .logo_top_text{
+        font-size: 1.5vw;
+    }
+    .logo_name{
         font-size: 2vw;
     }
     
