@@ -140,6 +140,9 @@
 }
 
 @media screen and (max-width: 750px) {
+    .main_communication{
+        overflow: hidden;
+    }
     .info{
         width: 100%;
     }
@@ -147,7 +150,9 @@
         width: 100%;
     }
     .fridge{
-        display: none;
+        transform: translate(0,0);
+        top: 50%;
+        right: -5%;
     }
 
     .info h1{
@@ -174,5 +179,18 @@
 @media screen and (max-width: 650px) {
     .whatsapp{
         height: 5vw;
+    }
+    .fridge{
+        transform: translate(0,-50%);
+        top:auto;
+        width: 100%;
+        top: 50%;
+        filter: blur(5px)
+    }
+    .info_text{
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
 }
