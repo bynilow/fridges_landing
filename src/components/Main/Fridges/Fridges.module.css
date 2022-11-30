@@ -6,6 +6,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    padding-top: 3.5rem;
 }
 
 .fridges_section{
@@ -27,7 +29,7 @@
 
 }
 
-.repair_all_h6{
+.repair_all_h2{
     font-size: 1.2vw;
     color: #90aae6;
 
@@ -37,7 +39,7 @@
     gap: 10px;
 }
 
-.repair_all_h6 span{
+.repair_all_h2 span{
     color: orange;
 }
 
@@ -66,7 +68,7 @@
         height: 125vh;
     }
 
-    .repair_all_h6{
+    .repair_all_h2{
         font-size: 2.5vw;
     }
 }
@@ -76,7 +78,22 @@
         font-size: 3vw;
         height: 160vh;
     }
-    .repair_all_h6{
+    .repair_all_h2{
         font-size: 2vw;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .fridges_section{
+        height: auto;
+    }
+    .bottom_text{
+        margin: 4vw;
+        font-size: 5vw;
+    }
+    .repair_all_h2{
+        font-size: 4vw;
+        word-wrap: break-word;
+    }
+}
+

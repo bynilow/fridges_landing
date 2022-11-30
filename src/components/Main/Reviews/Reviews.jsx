@@ -4,7 +4,7 @@ import ReviewCard from './ReviewCard/ReviewCard';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import s from './Reviews.module.css'
 
-function Reviews({width}) {
+function Reviews({myref}) {
 
     const reviews = [
         {
@@ -97,7 +97,7 @@ function Reviews({width}) {
     
 
     return (
-        <section className={s.reviews_section}>
+        <section className={s.reviews_section} ref={myref}>
 
             <div className={s.container}>
                 <h1 className={s.reviews_h1}>Отзывы о нас:</h1>
@@ -117,12 +117,12 @@ function Reviews({width}) {
                         onClick={onClickPrev}
                         className={`${s.arrow} ${s.prev}`} 
                         src="images/arrow_icon.png" 
-                        alt="" />
+                        alt="Отзыв назад" />
                     <img 
                         onClick={onClickNext}
                         className={`${s.arrow} ${s.next}`} 
                         src="images/arrow_icon.png" 
-                        alt="" />
+                        alt="Отзыв вперед" />
                 </div>
             </div>
         </section>

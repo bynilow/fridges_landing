@@ -1,5 +1,5 @@
 .reviews_section {
-    max-height: 100vh;
+    height: 100vh;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -22,7 +22,7 @@
 
     filter: hue-rotate(40deg);
 
-    background-image: url('../../../../public/images/reviews_background.svg');
+    background-image: url('../../../../public/images/reviews_background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

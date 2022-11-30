@@ -1,9 +1,10 @@
+import { EMAIL, FIRST_NUMBER } from '../../../consts/consts';
 import Logo from '../../Logo/Logo';
 import s from './Footer.module.css'
 
-function Footer() {
+function Footer({myref, onClickLink}) {
     return ( 
-        <footer className={s.footer}>
+        <footer className={s.footer} ref={myref}>
             <div className={s.container}>
                 <div className={s.logo_block}>
                     <h2>Холодильники</h2>
@@ -16,11 +17,32 @@ function Footer() {
                         Контакты
                     </p>
                     <p>
-                        +7(917)491-25-66
+                        {FIRST_NUMBER}
                     </p>
                     <p>
-                        info-ekb@chin-chinim.ru
+                        {EMAIL}
                     </p>
+                    
+                </div>
+                <div className={s.nav_block}>
+                    <p className={s.nav_p}>
+                        Навигация
+                    </p>
+                    <p className={s.nav_a} onClick={() => onClickLink('main')}>
+                        Главная
+                    </p>
+                    <p className={s.nav_a} onClick={() => onClickLink('prices')}>
+                        Цены
+                    </p>
+                    <p className={s.nav_a} onClick={() => onClickLink('about')}>
+                        О нас
+                    </p>
+                    <p className={s.nav_a} onClick={() => onClickLink('brands')}>
+                        Бренды
+                    </p>
+                    
+                </div>
+                <div className={s.time_block}>
                     <p className={s.time_p}>
                         Время работы
                     </p>
@@ -31,23 +53,7 @@ function Footer() {
                         7:00-22:00
                     </p>
                 </div>
-                <div className={s.nav_block}>
-                    <p className={s.nav_p}>
-                        Навигация
-                    </p>
-                    <a className={s.nav_a} href="">
-                        Цены
-                    </a>
-                    <a className={s.nav_a} href="">
-                        О нас
-                    </a>
-                    <a className={s.nav_a} href="">
-                        Отзывы
-                    </a>
-                </div>
-                <img className={s.ecb} src="images/ekb.jpg" alt="" />
             </div>
-            <img className={s.ecb_mobile} src="images/ekb.jpg" alt="" />
         </footer>
      );
 }

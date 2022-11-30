@@ -1,7 +1,8 @@
+import { FIRST_NUMBER } from '../../../consts/consts';
 import FridgeCard from './FridgeCard/FridgeCard';
 import s from './Fridges.module.css'
 
-function Fridges() {
+function Fridges({myref}) {
 
     const fridges = [
         'aeg',
@@ -32,7 +33,7 @@ function Fridges() {
     ]
 
     return ( 
-        <section className={s.fridges_section}>
+        <section className={s.fridges_section} ref={myref}>
             <div className={s.container}>
                 <h1>Мы ремонтируем все холодильники</h1>
                 <div className={s.fridges}>
@@ -40,9 +41,9 @@ function Fridges() {
                         fridges.map((i,ind) => <FridgeCard key={ind} name={i} /> )
                     }
                 </div>
-                <div>
+                <div className={s.bottom_text}>
                     <h4>Не нашли марку своего холодильника?</h4>
-                    <h6 className={s.repair_all_h6}>Ремонтируем все марки - звоните <span>+7 (904) 166-00-12</span></h6>
+                    <h2 className={s.repair_all_h2}>Ремонтируем все марки <span>{FIRST_NUMBER}</span></h2>
                 </div>
             </div>
         </section>

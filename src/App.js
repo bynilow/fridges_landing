@@ -15,9 +15,13 @@ function App() {
     };
   }, [])
 
+  window.scrollTo({
+    top: '100%',
+    behavior: 'smooth'
+  })
+
   return (
     <div className={s.App}>
-      <Header width={width} />
       <Main width={width} />
     </div>
   );

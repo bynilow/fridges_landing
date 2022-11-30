@@ -29,7 +29,7 @@
     
 }
 
-.info h2{
+.info h1{
     text-transform: none;
     text-align: left;
     font-weight: 500;
@@ -37,12 +37,30 @@
     line-height: 0.9;
 }
 
-.info h4{
-    margin-top: 1vw;
+.info_text h2{
     text-transform: none;
     text-align: left;
     font-weight: 400;
     font-size: 2vw;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.to_home_h2{
+    margin-top: 1vw;
+    
+}
+
+.whatsapp_text span{
+    font-weight: bold;
+    color: #229954;
+}
+
+.whatsapp{
+    height: 2vw;
+    object-fit: contain;
 }
 
 .number{
@@ -132,11 +150,11 @@
         display: none;
     }
 
-    .info h2{
+    .info h1{
         font-size: 5vw;
     }
     
-    .info h4{
+    .info h2{
         font-size: 4vw;
     }
 
@@ -147,8 +165,14 @@
     .btn{
         font-size: 2.5vw;
     }
+
+    .whatsapp{
+        height: 4vw;
+    }
 }
 
 @media screen and (max-width: 650px) {
-
+    .whatsapp{
+        height: 5vw;
+    }
 }

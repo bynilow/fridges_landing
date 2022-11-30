@@ -5,7 +5,7 @@
     display: flex;
     
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     font-weight: 500;
 }
@@ -24,7 +24,6 @@
 }
 
 .logo_block p{
-    margin-top: 2vw;
 }
 
 .container div{
@@ -40,20 +39,12 @@
 .nav_a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 .contacts_p, .nav_p, .time_p{
     text-transform: uppercase;
     color: #7c8699;
-}
-
-.time_p{
-    margin-top: 1vw;
-}
-
-.ecb{
-    height: 100%;
-    margin-left: 3vw;
 }
 
 .ecb_mobile{
@@ -86,7 +77,6 @@
         flex-wrap: wrap;
     }
     .footer{
-        height: 100vh;
         justify-content: space-evenly;
     }
     .ecb{
@@ -100,16 +90,35 @@
     
 }
 
+@media screen and (max-width: 750px) {
+    .container{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+    .container div{
+        width: 50%;
+        height: 50%;
+        text-align: center;
+    }
+    .logo_block *{
+        text-align: center;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 650px) {
+    .footer{
+        height: 100vh;
+    }
     .container{
         width: 95vw;
         justify-content: space-between;
     }
-    .logo_block{
-        visibility: collapse;
-        display: none;
-        width: 0;
-        flex: 0 0 0;
+    .container div{
+        width: 100%;
+        height: 20%;
     }
     .contacts_block, .nav_block{
         width: 50%;

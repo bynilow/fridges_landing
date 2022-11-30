@@ -17,7 +17,7 @@ function ModalReception({ closeModal }) {
     const [isSended, setIsSended] = useState(false);
 
     const onChangeName = (e) => {
-        if (isNaN(e.target.value)) setPhone(e.target.value);
+        setName(e.target.value);
     }
     const onChangePhone = (e) => {
         if (!(isNaN(e.target.value))) setPhone(e.target.value);
@@ -81,7 +81,7 @@ function ModalReception({ closeModal }) {
                             onClick={closeModal}
                             className={s.close}
                             src="images/close_icon.png"
-                            alt="" />
+                            alt="Закрыть окно заявки" />
                         <h1>Успешно отправлено!</h1>
                     </div>
                     :
@@ -93,7 +93,7 @@ function ModalReception({ closeModal }) {
                             onClick={closeModal}
                             className={s.close}
                             src="images/close_icon.png"
-                            alt="" />
+                            alt="Закрыть окно заявки" />
                         <div className={s.inputs}>
                             <input
                                 className={s.input}

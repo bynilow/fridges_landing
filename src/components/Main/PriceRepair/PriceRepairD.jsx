@@ -3,7 +3,7 @@ import s from './PriceRepairD.module.css'
 import { useState } from 'react';
 import ModalReception from '../../ModalReception/ModalReception';
 
-function PriceRepairD() {
+function PriceRepairD({myref}) {
 
     const [modalOpened, setModalOpened] = useState(false);
     
@@ -167,20 +167,20 @@ function PriceRepairD() {
 
 
     return (
-        <section >
+        <section className={s.price_section} ref={myref}>
             {
                 modalOpened && <ModalReception closeModal={onClickCloseModal} />
             }
             <div className={s.container}>
-                <h2>
+                <h1>
                     Цены на ремонт
-                </h2>
-                <h3>
+                </h1>
+                <h2>
                     Цены актуальны на <span>{new Date().toLocaleDateString()}</span>
-                </h3>
+                </h2>
                 <div className={s.technics}>
                     <div className={s.name_technic}>
-                        <h5>Холодильник не морозит</h5>
+                        <h3>Холодильник не морозит</h3>
                     </div>
                     <div className={s.repair_info}>
                         <p>
@@ -205,7 +205,7 @@ function PriceRepairD() {
                     }
 
                     <div className={s.name_technic}>
-                        <h5>Снежная "шуба" внутри холодильника</h5>
+                        <h3>Снежная "шуба" внутри холодильника</h3>
                     </div>
                     {
                         repairSnowyCoat.map((i, ind) => <RepairCard
@@ -219,7 +219,7 @@ function PriceRepairD() {
 
 
                     <div className={s.name_technic}>
-                        <h5>Вода под холодильником или внутри</h5>
+                        <h3>Вода под холодильником или внутри</h3>
                     </div>
                     {
                         repairWater.map((i, ind) => <RepairCard
@@ -232,7 +232,7 @@ function PriceRepairD() {
                     }
 
                     <div className={s.name_technic}>
-                        <h5>Повышенный шум в холодильнике</h5>
+                        <h3>Повышенный шум в холодильнике</h3>
                     </div>
                     {
                         repairNoise.map((i, ind) => <RepairCard
@@ -245,7 +245,7 @@ function PriceRepairD() {
                     }
 
                     <div className={s.name_technic}>
-                        <h5>Включается и "сразу отключается"</h5>
+                        <h3>Включается и "сразу отключается"</h3>
                     </div>
                     {
                         repairEnableDisable.map((i, ind) => <RepairCard

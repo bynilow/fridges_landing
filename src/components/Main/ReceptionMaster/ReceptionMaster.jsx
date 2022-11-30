@@ -14,7 +14,7 @@ function ReceptionMaster() {
     const [isSended, setIsSended] = useState(false);
 
     const onChangeName = (e) => {
-        if (isNaN(e.target.value)) setPhone(e.target.value);
+        setName(e.target.value);
     }
 
     const onChangePhone = (e) => {
@@ -24,7 +24,7 @@ function ReceptionMaster() {
     const hoursSelect = [];
     for (let i = 7; i < 23; i++) {
         hoursSelect.push(
-            <option className={s.option} value={i}>
+            <option key={i} className={s.option} value={i}>
                 {i}
             </option>
         )
@@ -33,7 +33,7 @@ function ReceptionMaster() {
     const minutesSelect = [];
     for (let i = 0; i < 60; i += 5) {
         minutesSelect.push(
-            <option className={s.option} value={i < 10 ? '0' + i : i}>
+            <option key={i} className={s.option} value={i < 10 ? '0' + i : i}>
                 {i < 10 ? '0' + i : i}
             </option>
         )
@@ -62,83 +62,92 @@ function ReceptionMaster() {
 
     return (
         <section className={s.how_works_section}>
-            <div className={s.container}>
-                <div className={s.texts}>
-                    <h2>
-                        Оставьте заявку на вызов мастера
-                    </h2>
-                    <p>
-                        Заполните форму и мы с вами свяжемся!
-                    </p>
-                </div>
-                <form className={s.form} onSubmit="return false">
-                    <div className={s.inputs}>
-                        <input
-                            className={s.input}
-                            type="text"
-                            placeholder="Ваше имя"
-                            value={name}
-                            onChange={onChangeName}
-                            minLength="3"
-                            maxLength="50"
-                            required />
-                        <input
-                            className={s.input}
-                            type="tel"
-                            placeholder="Номер телефона"
-                            maxLength="16"
-                            minLength="11"
-                            required
-                            value={phone}
-                            onChange={onChangePhone} />
-                        <input
-                            className={s.input}
-                            type="text"
-                            placeholder="Модель"
-                            required
-                            maxLength="50"
-                            value={model}
-                            onChange={e => setModel(e.target.value)} />
-                        <input
-                            className={s.input}
-                            type="text"
-                            placeholder="Адрес"
-                            required
-                            maxLength="80"
-                            value={adress}
-                            onChange={e => setAdress(e.target.value)} />
-                        <div className={s.select_div}>
-                            <p className={s.select_p}>
-                                Удобное время для осмотра
-                            </p>
-                            <select value={hours} onChange={e => setHours(e.target.value)}>
-                                {
-                                    hoursSelect
-                                }
-                            </select>
-                            <select value={minutes} onChange={e => setMinutes(e.target.value)}>
-                                {
-                                    minutesSelect
-                                }
-                            </select>
+            {
+                isSended
+                    ?
+                    <div className={s.success}>
+                        <h2>Заявка успешно отправлена!</h2>
+                        <h3>С вами свяжется специалист, спасибо</h3>
+                    </div>
+                    :
+                    <div className={s.container}>
+                        <div className={s.texts}>
+                            <h1>
+                                Оставьте заявку на вызов мастера
+                            </h1>
+                            <h2>
+                                Заполните форму и мы с вами свяжемся!
+                            </h2>
                         </div>
+                        <form className={s.form}>
+                            <div className={s.inputs}>
+                                <input
+                                    className={s.input}
+                                    type="text"
+                                    placeholder="Ваше имя"
+                                    value={name}
+                                    onChange={onChangeName}
+                                    minLength="3"
+                                    maxLength="50"
+                                    required />
+                                <input
+                                    className={s.input}
+                                    type="tel"
+                                    placeholder="Номер телефона"
+                                    maxLength="16"
+                                    minLength="11"
+                                    required
+                                    value={phone}
+                                    onChange={onChangePhone} />
+                                <input
+                                    className={s.input}
+                                    type="text"
+                                    placeholder="Модель"
+                                    required
+                                    maxLength="50"
+                                    value={model}
+                                    onChange={e => setModel(e.target.value)} />
+                                <input
+                                    className={s.input}
+                                    type="text"
+                                    placeholder="Адрес"
+                                    required
+                                    maxLength="80"
+                                    value={adress}
+                                    onChange={e => setAdress(e.target.value)} />
+                                <div className={s.select_div}>
+                                    <p className={s.select_p}>
+                                        Удобное время для осмотра
+                                    </p>
+                                    <select value={hours} onChange={e => setHours(e.target.value)}>
+                                        {
+                                            hoursSelect
+                                        }
+                                    </select>
+                                    <select value={minutes} onChange={e => setMinutes(e.target.value)}>
+                                        {
+                                            minutesSelect
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div className={s.checkbox}>
+                                <input
+                                    type="checkbox"
+                                    name="agree"
+                                    required
+                                    checked={checkbox}
+                                    onChange={e => setCheckbox(e.target.checked)} />
+                                <label htmlFor="agree">
+                                    Согласен на обработку данных в соответствии с Политикой конфиденциальности
+                                </label>
+                            </div>
+                            <button className={s.btn} onClick={onClickSend}>
+                                Вызвать мастера
+                            </button>
+                        </form>
                     </div>
-                    <div className={s.checkbox}>
-                        <input
-                            type="checkbox"
-                            name="agree"
-                            required
-                            checked={checkbox}
-                            onChange={e => setCheckbox(e.target.checked)} />
-                        <label htmlFor="agree">
-                            Согласен на обработку данных в соответствии с Политикой конфиденциальности
-                        </label>
-                    </div>
-                    <button className={s.btn} onClick={onClickSend}>
-                        Вызвать мастера
-                    </button>
-                </form>
-            </div>
+            }
 
 
         </section>

@@ -3,7 +3,7 @@ import s from './RepairCard.module.css'
 function RepairCard({name, requiredWorks, price, color = 0, openModal, closeModal}) {
     return ( 
         <div className={`${s.card} ${color === 0 ? s.white_card : s.gray_card}`}>
-            <p>
+            <p className={s.name}>
                 { name }
             </p>
             <p className={s.requiredWorks_p}>
@@ -12,9 +12,9 @@ function RepairCard({name, requiredWorks, price, color = 0, openModal, closeModa
             <p className={s.price}>
                 от { price } руб.
             </p>
-            <button className={s.order_button} onClick={openModal}>
+            <div className={s.order_button} onClick={openModal}>
                 Заказать
-            </button>
+            </div>
         </div>
      );
 }

@@ -4,7 +4,7 @@ function ReviewCard({name, rating, description}) {
 
     let stars = []
     for(let i = 0; i < rating; i++){
-        stars.push(<img className={s.star} src="images/star_icon.png" alt="" />)
+        stars.push(<img className={s.star} src="images/star_icon.png" alt="Оценка отзыва" />)
     }
 
     return ( 
